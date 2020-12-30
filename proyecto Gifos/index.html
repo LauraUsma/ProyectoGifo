@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <link href="styles/gifos.css" rel="stylesheet" type="text/css">
+    <link href="styles mobile/mobile.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+    <div class="linea"></div>
+    <header class="header" id="headerTab">
+
+        <div class="icono link_tabs " id="icono"></div>
+
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="lbl-menu">
+            <span id="spn1"></span>
+            <span id="spn2"></span>
+            <span id="spn3"></span>
+        </label>
+
+
+        <nav class="menu disabled_menu" id="menuNav">
+            <ol class="linksNavegacion">
+                <li>
+                    <a class="modonocturno" id="clickBox">MODO NOCTURNO</a>
+                    <span class="linea"></span>
+                </li>
+
+                <li>
+                    <a class="link_tabs favoritoColor" id="favorito" href="#">FAVORITOS</a>
+                    <span class="linea"></span>
+                </li>
+
+                <li>
+                    <a class="link_tabs mi_gifo" id="misGifos" href="#">MIS GIFOS</a>
+                    <span class="linea"></span>
+                </li>
+
+            </ol>
+        </nav>
+
+        <div class="link_tabs" id="crearNewGifs"> </div>
+
+    </header>
+
+    <main id="main_1">
+
+        <div class="containerExpandirGif">
+
+            <img class="closeExpandirGifo" id="closeExpandirGifo" src="zip/assets/close.svg" alt="">
+            <img id="img-expandir1">
+            <div class="parrafoUsuarioExpandido">
+                <p id="user_gif1"></p>
+                <h4 id="tituloGifExpandir1"></h4>
+            </div>
+        </div>
+
+
+        <div class="containerExpandirGif_carrusel">
+
+            <img class="closeExpandirGifo_carrusel" id="closeExpandirGifo_carrusel" src="zip/assets/close.svg" alt="">
+            <img id="img-expandir">
+            <div class="parrafoUsuarioExpandido">
+                <p id="user_gif"></p>
+                <h4 id="tituloGifExpandir"></h4>
+            </div>
+
+        </div>
+
+        <div class="containerExpan_Favoritos">
+
+            <img class="closeExpan_favoritos" id="closeExpan_favoritos" src="zip/assets/close.svg" alt="">
+            <img id="img-expandirfavoritos">
+            <div class="parrafoUsuarioExpandido">
+                <p id="user_giffavoritos"></p>
+                <h4 id="tituloGifExpandirfavoritos"></h4>
+            </div>
+        </div>
+
+
+        <div class="containerExpan_misGifos">
+
+            <img class="closeExpan_misGifos" id="closeExpan_misGifos" src="zip/assets/close.svg" alt="">
+            <img id="img-expandirMisGifos">
+            <div class="parrafoUsuarioExpandido">
+                <p id="user_gifMisGifos"></p>
+                <h4 id="tituloGifExpandirMisGifos"></h4>
+            </div>
+        </div>
+
+
+        <div class="main " id="mainOff">
+
+
+            <div class="main_panel panelPrincipal active" id="mainBotonGifos">
+                <section class="title">
+                    <h1>Inspirate, busca, guarda, y crea <br> los mejores <span class="color">GIFOS </span> </h1>
+                </section>
+
+                <figure class="logo">
+                    <img src="zip/assets/ilustra_header.svg" alt="">
+                </figure>
+
+                <div class="barraBusqueda1">
+                    <div class="buscar">
+                        <input class="buscar_texto" type="text" placeholder="Busca GIFOS y más" id="buscar_texto1">
+                        <label for="search"> <i class="btn" id="btn-buscar"></i></label>
+                        <ul class="list-sugerencia" id="box-search"></ul>
+                    </div>
+                </div>
+
+                <div class="subtitle" id="trending-text">
+                    <h3 class="sub1">Trending:</h3>
+                    <h4 class="sub2">Reactions, Entertainment, Sports, Stickers, Artists</h4>
+                </div>
+
+                <!--contenedor de los gifs-->
+
+                <div class="search_barOn " id="search_barOn1">
+
+                    <div id="divTitleId"> </div>
+                    <div id="search"> </div>
+                    <div id="divMoreResultId"></div>
+
+                </div>
+
+                <div class="lorem" id="divloremIpsum">
+                    <h2 class="tituloLorem">Lorem Ipsum</h2>
+                    <figure>
+                        <img src="zip/assets/icon-busqueda-sin-resultado.svg" alt="">
+                    </figure>
+                    <h6 class="subtituloLorem">Intenta con otra búsqueda.</h6>
+
+                </div>
+
+            </div>
+
+            <!--panel favoritos-->
+            <div class="main_panel panelFavoritos" id="mainFavoritos">
+
+                <figure class="logoFavoritosS">
+                    <img src="zip/assets/icon-favoritos.svg" alt="">
+                </figure>
+
+                <section class="title">
+                    <h3>Favoritos </h3>
+                </section>
+
+
+                <div class="favSinContenido" id="favSinContenido">
+                    <figure class="favSinContenido1">
+                        <img src="zip/assets/icon-fav-sin-contenido.svg" alt="">
+                    </figure>
+
+                    <section class="subtituloFavorito">
+                        <h3> "¡Guarda tu primer GIFO en Favoritos <br>para que se muestre aquí!"</h3>
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!--panel Mis Gifos-->
+
+            <div class="main_panel panelMisGifos" id="mainMisGifos">
+
+                <figure class="logoGifos">
+                    <img src="zip/assets/icon-mis-gifos.svg">
+                </figure>
+
+                <section class="titleGifos">
+                    <h1> Mis GIFOS</h1>
+                </section>
+
+                <div class="nuevosGifos" id="nuevosGifos">
+                    <figure class="nuevosGifos1">
+                        <img src="zip/assets/icon-mis-gifos-sin-contenido.svg" alt="">
+                    </figure>
+
+                    <section class="subtituloGifos">
+                        <h3>¡Anímate a crear tu primer GIFO!</h3>
+                    </section>
+                </div>
+
+            </div>
+
+
+            <!--panel crear gifos-->
+
+            <div class="main_panel crearMisGifos" id="mainCrearGifos">
+                <div class="crearTusPropiosGifos" id="crearTusPropiosGifos">
+
+                    <div class="logoCamara">
+                        <img class="camara" src="zip/assets/camara.svg">
+                        <img class="luzCamara" src="zip/assets/element-luz-camara.svg">
+                    </div>
+
+
+                    <div class="contenedorCrearGifo" id="contenedorCrearGifo">
+                        <div class="bordes">
+
+                            <div class="cuadro1"></div>
+                            <div class="cuadro2"></div>
+                        </div>
+
+                        <section class="titulosCrearGifo" id="titulosCrearGifo">
+                            <h3 class="titleCrearGifo" id="titleCrearGifo">Aquí podrás <br>crear tus propios <span
+                                    class="color">
+                                    GIFOS</span></h3>
+
+                            <h3 class="titleCrearGifo2" id="titleCrearGifo2">¿Nos das acceso <br>a tu cámara?</h3>
+
+                            <h4 class="subtitleCrearGifo" id="subtitleCrearGifo">¡Crea tu GIFO en sólo 3 pasos!
+                                <br>(sólo necesitas una cámara
+                                para grabar un video)</h4>
+                            <h4 class="subtitleCrearGifo2" id="subtitleCrearGifo2">El acceso a tu camara será válido
+                                sólo<br>
+                                por el tiempo en el que estés creando el GIFO.</h4>
+
+
+                        </section>
+
+
+
+                        <div class="grabarVideo" id="grabarVideo">
+                            <video class="video" id="video"></video>
+                            <img class="gifNuevoGrabado" id="gifNuevoGrabado">
+
+                        </div>
+
+
+
+
+
+                        <div class="bordes">
+                            <div class="cuadro3"></div>
+                            <div class="cuadro4"></div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="pasosCrearGifo" id="pasosCrearGifo">
+                    <div class="cuadro_paso1" id="cuadro_paso1">
+                        <h4 class="paso1" id="paso1">1</h4>
+                    </div>
+                    <div class="cuadro_paso2" id="cuadro_paso2">
+                        <h4 class="paso1" id="paso1">2</h4>
+                    </div>
+                    <div class="cuadro_paso3" id="cuadro_paso3">
+                        <h4 class="paso1" id="paso1">3</h4>
+                    </div>
+
+                    <div class="eventosdeCaptura" id="eventosdeCaptura">
+                        <div class="cronometro" id="cronometro">
+                            <p id="crono">
+                                <span id="horas">00</span>
+                                <span id="separador">:</span>
+                                <span id="minutos">00</span>
+                                <span id="separador">:</span>
+                                <span id="segundos">00</span>
+                            </p>
+                        </div>
+
+                        <div class="nuevaCaptura" id="nuevaCaptura">
+                            <p id="repetirCaptura">REPETIR CAPTURA</p>
+                        </div>
+                    </div>
+
+                    <div class="logoPelicula">
+                        <img class="pelicula" src="zip/assets/pelicula.svg">
+                    </div>
+                </div>
+
+
+                <div class="linea1"></div>
+
+                <div class="btnCrearNuevoGifo" id="btnCrearNuevoGifo">
+                    <a href="#" class="comenzar" id="comenzar">COMENZAR</a>
+
+                </div>
+
+                <div class="btnGrabar" id="btnGrabar">
+                    <a href="#" class="grabar" id="grabar">GRABAR</a>
+                </div>
+
+                <div class="btnFinalizar" id="btnFinalizar">
+                    <a href="#" class="finalizar" id="finalizar">FINALIZAR</a>
+                </div>
+
+                <div class="btnSubirGifo" id="btnSubirGifo">
+                    <a href="#" class="subirGifo" id="subirGifo">SUBIR GIFO</a>
+                </div>
+
+
+            </div>
+
+
+
+
+            <!--panel carrusel-->
+
+
+            <div class="main_panel panel_Carrusel" id="contenedorCarrusel">
+                <section class="container">
+
+                    <section class="cont1">
+                        <h2 class="cont2">Trending GIFOS</h2>
+                        <h4 class="cont3">Mira los últimos GIFO de nuestra comunidad.</h4>
+                    </section>
+
+                    <section class="slider">
+                        <div class="button-left" id="but-left"></div>
+
+
+                        <div class="container-slider" id="cont">
+
+                        </div>
+
+                        <div class="button-right" id="but-right"></div>
+                    </section>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h5 class="title_footer">Compartir en:</h5>
+        <div class="social">
+
+            <a href="http://facebook.com" target="_blank"><span class="social-link facebook"></span></a>
+            <a href="http://twitter.com" target="_blank"><span class="social-link twitter"></span></a>
+            <a href="http://instagram.com" target="_blank"><span class="social-link instagram"></span></a>
+        </div>
+
+        <div class="ref">
+            <p>
+                <h5> © GIFOS 2020 All Rights Reserved.</h5>
+            </p>
+        </div>
+    </footer>
+    <div class="linea"></div>
+    <script src="javascript/modoOscuro.js"> </script>
+    <script src="javascript/tabsNavegacion.js"> </script>
+    <script src="javascript/barrabusqueda.js"> </script>
+    <script src="javascript/carrusel.js"> </script>
+    <script src="javascript/crearNewGif.js"> </script>
+    <script src="javascript/menumobile.js"> </script>
+ 
+</body>
+
+</html>

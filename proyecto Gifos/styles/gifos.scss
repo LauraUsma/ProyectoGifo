@@ -1,0 +1,1515 @@
+$color-text: #572EE5;
+$color-text1: #ffffff;
+$color-text2: #0000;
+$font:'Montserrat-Bold700',
+sans-serif;
+$font1:'Montserrat-500',
+sans-serif;
+$font2:'Roboto-Regular',
+sans-serif;
+$color:#37383C;
+$color1:#222326;
+$color2: #50E3C2;
+$color3: #9CAFC3;
+$color4: #000000 100%;
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.linea {
+    width: 100%;
+    height: 5px;
+    background-color: $color-text;
+}
+
+body {
+    transition: .3s ease all;
+    width: 1440px;
+
+    &.dark {
+        background: $color;
+
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .div-centraltitle {
+            color: $color-text1;
+        }
+    }
+}
+
+//header
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    height: 90px;
+    padding-left: 156px;
+    padding-right: 156px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+    text-decoration-color: $color2;
+}
+
+//******Icono Gifos**********
+
+.icono {
+    display: flex;
+    background-image: url('../zip/assets/logo-desktop.svg');
+    background-repeat: no-repeat;
+    width: 59.1px;
+    height: 59.1px;
+    margin: 18px;
+
+    body.dark & {
+        display: flex;
+        background-image: url('../zip/assets/Logo-modo-noc.svg');
+        background-repeat: no-repeat;
+        width: 59.1px;
+        height: 59.1px;
+        margin: 18px;
+    }
+
+}
+
+
+#btn-menu {
+    display: none;
+}
+
+.closeMenu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ol {
+    display: flex;
+    list-style: none;
+    padding-top: 36px;
+    padding-bottom: 38px;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: $font;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+
+    body.dark & {
+        color: $color-text1;
+
+    }
+}
+
+.modonocturno,
+.favoritoColor,
+.mi_gifo {
+    color: $color-text;
+}
+
+.cambiarColor {
+    color: $color3;
+}
+
+.crearDiurno {
+    background-image: url('../zip/assets/button-crear-gifo.svg');
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;
+    margin: 18px;
+
+    body.dark & {
+        background-image: url('../zip/assets/CTA-crear-gifo-modo-noc.svg');
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
+        margin: 18px;
+    }
+}
+
+.crear_gifo_hover {
+    background-image: url('../zip/assets/CTA-crear-gifo-hover.svg');
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;
+    margin: 18px;
+}
+
+.crearGifoActive {
+    background-image: url('../zip/assets/CTA-crear-gifo-active.svg');
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 54px;
+    margin: 18px;
+
+    body.dark & {
+        background-image: url('../zip/assets/CTA-crear-gifo-active-modo-noc.svg');
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
+        margin: 18px;
+    }
+}
+
+
+//*******************main*************
+
+.panelPrincipal {
+    display: block;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $color-text;
+    font-family: $font;
+    font-size: 35px;
+}
+
+.color {
+    color: $color2;
+}
+
+//*****************barra de busqueda****************
+
+.barraBusqueda1 {
+    width: 1440px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 27px;
+    width: 399px;
+    height: 190px;
+    margin: auto;
+}
+
+.buscar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    width: 551px;
+    border-radius: 25px;
+    border-style: ridge;
+    border-color: $color-text;
+    padding: 13px 20px 13px 54px;
+    margin-bottom: 73px;
+
+    body.dark & {
+        border-color: $color-text1;
+    }
+}
+
+.buscar_texto {
+    display: flex;
+    border: none;
+    background: none;
+    outline: none;
+    width: 90%;
+    height: 22px;
+    border-radius: 25px;
+    font-family: $font2;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block; 
+    background-image: url('../zip/assets/icon-search.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/icon-search-mod-noc.svg');
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
+.btnX {
+    display: inline-block;
+    background-image: url('../zip/assets/close.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    body.dark & {
+        display: inline-block;
+        background-image: url('../zip/assets/close-modo-noct.svg');
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
+//autocompletar en barra de busqueda
+
+.list-sugerencia {
+    display: none;
+    input {
+        outline: none;
+    }
+}
+
+.list-Active {
+    width: 100%;
+    border-top: 1px solid #9CAFC3;
+    list-style: none;
+
+    li {
+        padding-top: 14px;
+        font-family: $font2;
+        color: $color3;
+        font-size: 16px;
+        line-height: 19px;
+
+        .btn {
+            margin-right: 14.6px;
+            filter: opacity(50%) grayscale(300%);
+        }
+    }
+}
+
+//recciones-entretener
+.subtitle {
+    margin-top: 73px;
+}
+
+.sub1 {
+    display: flex;
+    justify-content: center;
+    color: $color-text;
+    font-family: $font;
+    font-size: 18px;
+}
+
+.sub2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+    color: $color-text;
+    font-family: $font1;
+    font-size: 16px;
+}
+
+// contenedor resultado de busqueda
+
+.search_barOn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-centraltitle {
+    display: flex;
+    justify-content: center;
+    padding-top: 137px;
+    padding-bottom: 60px;
+    color: $color-text;
+    font-size: 35px;
+}
+
+.img_barra_busqueda {
+    width: 260px;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+#search {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(4, 1fr);
+    column-gap: 29px;
+    row-gap: 28px;
+    padding-bottom: 78px;
+    width: 1440px;
+    padding-left: 156px;
+    padding-right: 157px;
+}
+
+
+.divMoreResultId {
+    background-image: url('../zip/assets/CTA-ver-mas.svg');
+    width: 127px;
+    height: 50px;
+    padding-bottom: 78px;
+    background-size: 127px 50px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin: auto;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/CTA-ver+hover-modo-noc.svg');
+        width: 127px;
+        height: 50px;
+        padding-bottom: 78px;
+        background-size: 127px 50px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+// hover con botones
+
+.btnFavoritosOn {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 225px;
+    left: 133px;
+    opacity: 0.7;
+    float: left;
+    margin-right: 10px;
+}
+
+.btnFavoritosOn:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 225px;
+    left: 133px;
+    opacity: 1;
+    float: left;
+    margin-right: 10px;
+}
+
+
+.btnesdelHover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 192px;
+    left: 137px;
+    opacity: 0.7;
+    float: left;
+    margin-right: 10px;
+}
+
+.btnesdelHoverCorazon {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 192px;
+    left: 137px;
+    opacity: 1;
+    float: left;
+    margin-right: 10px;
+}
+
+.btnesdelHover:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 192px;
+    left: 137px;
+    opacity: 1;
+    float: left;
+    margin-right: 10px;
+}
+
+.botonesHover {
+    background: $color-text;
+    width: 260px;
+    height: 200px;
+}
+
+.btnFavoritohover {
+    background: $color-text;
+}
+
+.opacidad {
+    opacity: 0.6;
+}
+
+.btnFavorito { 
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnFavorito_Hover {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnFavoritoActive {
+    width: 32px;
+    height: 32px;
+    padding: 6.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: $color-text1;
+}
+
+.btnDescarga {
+    background-image: url('../zip/assets/icon-download.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnDescargaHover {
+    background-image: url('../zip/assets/icon-download-hover.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: $color-text1;
+}
+
+.btnExpan {
+    background-image: url('../zip/assets/icon-max-normal.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnExpanHover {
+    background-image: url('../zip/assets/icon-max-hover.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+//*****contenedores para cuando se expande el gif***********
+.containerExpandirGif,
+.containerExpan_Favoritos,
+.containerExpandirGif_carrusel,
+.containerExpan_misGifos {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(247, 247, 247, 0.893);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s easy ease-in;
+}
+
+.move {
+    transform: translateX(0);
+}
+
+.expGifNuevoDiv {
+    height: 60%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.favExpandirGifo,
+.favExpandirGifo_carrusel,
+.favExpan_misGifos {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 43px;
+    left: 565px;
+    border: 1px solid #CED7E1;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.downExpandirGifo,
+.downExpandirGifo_carrusel,
+.downExpan_misGifos {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 43px;
+    right: 390px;
+    border: 1px solid #CED7E1;
+    opacity: 0.6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.closeExpandirGifo,
+.closeExpan_favoritos,
+.closeExpandirGifo_carrusel,
+.closeExpan_misGifos {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.downExpandirGifo-2 {
+    position: fixed;
+    bottom: 10px;
+    padding-left: 800px;
+    cursor: pointer;
+}
+
+.favExpandirGifo-2 {
+    position: fixed;
+    bottom: 10px;
+    padding-left: 700px;
+    cursor: pointer;
+}
+
+.favActExpandir {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 43px;
+    left: 565px;
+    border: 1px solid #CED7E1;
+    border-radius: 6px;
+    padding: 6.5px;
+    cursor: pointer;
+    background-color: $color-text1;
+}
+
+//busquedasin resultado
+
+.lorem {
+    display: none;
+    text-align: center;
+    padding-bottom: 149px;
+}
+
+.lorem-visible {
+    display: block;
+    text-align: center;
+    padding-bottom: 149px;
+}
+
+.tituloLorem {
+    font-size: 30px;
+    color: $color-text;
+}
+
+.subtituloLorem {
+    font-size: 22px;
+    color: $color2;
+}
+
+// panel favoritos
+
+.panelFavoritos {
+    display: none;
+    text-align: center;
+}
+
+.title {
+    background-size: 25px;
+    padding-bottom: 109.3px;
+}
+
+.favoritosSeleccionados {
+    width: 260px;
+    height: 200px;
+}
+
+.div-favorito {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 29px;
+    padding-top: 36px;
+    padding-right: 157px;
+    padding-left: 156px;
+}
+
+.subtituloFavorito {
+    color: $color2;
+    padding-top: 27px;
+    padding-bottom: 137px;
+}
+
+.btnVerMasFav {
+    background-image: url('../zip/assets/CTA-ver-mas.svg');
+    width: 127px;
+    height: 50px;
+    padding-bottom: 78px;
+    background-size: 127px 50px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin-top: 130px;
+    margin-right: 423px;
+    margin-left: 420px;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/CTA-ver+hover-modo-noc.svg');
+        width: 127px;
+        height: 50px;
+        padding-bottom: 78px;
+        background-size: 127px 50px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        margin-top: 130px;
+        margin-right: 423px;
+        margin-left: 420px;
+        cursor: pointer;
+    }
+}
+
+//panel Mis Gifos
+
+.panelMisGifos {
+    display: none;
+    text-align: center;
+}
+
+.titleGifos {
+    color: $color-text;
+    background-size: 25px;
+}
+
+.nuevosGifos {
+    padding-top: 111px;
+}
+
+.add-new-gifos {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 29px;
+    padding: 36px 157px 79px 156px;
+}
+
+.subtituloGifos {
+    color: $color2;
+    padding-top: 40px;
+    padding-bottom: 136px;
+}
+
+.btnVerMasMisGifs {
+
+    background-image: url('../zip/assets/CTA-ver-mas.svg');
+    width: 127px;
+    height: 50px;
+    padding-bottom: 78px;
+    background-size: 127px 50px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin-top: 280px;
+    margin-right: 415px;
+    margin-left: 415px;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/CTA-ver+hover-modo-noc.svg');
+        width: 127px;
+        height: 50px;
+        padding-bottom: 78px;
+        background-size: 127px 50px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        margin-top: 280px;
+        margin-right: 415px;
+        margin-left: 415px;
+        cursor: pointer;
+    }
+}
+
+//panel crear mis gifos
+
+.crearMisGifos {
+    display: none;
+    text-align: center;
+    height: 572px;
+}
+
+.crearTusPropiosGifos {
+    display: flex;
+}
+
+.logoCamara {
+    padding-left: 156px;
+}
+
+.camara {
+    padding-top: 118px;
+}
+
+.luzCamara {
+    width: 91px;
+    height: 151px;
+}
+
+.contenedorCrearGifo {
+    border: 1px solid $color-text;
+    width: 688px;
+    height: 390px;
+}
+
+.bordes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cuadro1 {
+    margin-left: 20px;
+    margin-top: 24px;
+    width: 27px;
+    height: 25px;
+    border-top: 1px solid $color2;
+    border-left: 1px solid $color2;
+}
+
+.cuadro2 {
+    margin-right: 20px;
+    margin-top: 24px;
+    width: 27px;
+    height: 25px;
+    border-top: 1px solid $color2;
+    border-right: 1px solid $color2;
+}
+
+.cuadro3 {
+    width: 27px;
+    height: 25px;
+    border-bottom: 1px solid $color2;
+    border-left: 1px solid $color2;
+    margin-left: 21px;
+    margin-bottom: 19px;
+}
+
+.cuadro4 {
+    width: 27px;
+    height: 25px;
+    border-bottom: 1px solid $color2;
+    border-right: 1px solid $color2;
+    margin-right: 21px;
+    margin-bottom: 19px;
+}
+
+.titulosCrearGifo {
+    height: 219px;
+    margin-top: 59px;
+    margin-bottom: 23px;
+}
+
+.video {
+    width: 480px;
+    height: 300px;
+    margin: auto;
+    display: none;
+}
+
+.gifNuevoGrabado {
+    display: none;
+    width: 480px;
+    height: 300px;
+    margin: auto;
+}
+
+.titleCrearGifo {
+    font-size: 25px;
+    font-family: $font;
+    color: $color-text;
+    line-height: 35px;
+}
+
+.subtitleCrearGifo {
+    font-size: 16px;
+    line-height: 29px;
+    font-family: $font2;
+}
+
+.titleCrearGifo2 {
+    display: none;
+    font-size: 25px;
+    font-family: $font;
+    color: $color-text;
+    line-height: 35px;
+}
+
+.subtitleCrearGifo2 {
+    display: none;
+    font-size: 16px;
+    line-height: 29px;
+    font-family: $font2;
+}
+
+.logoPelicula {
+    padding-left: 50px;
+    height: 87.2px;
+}
+
+.pasosCrearGifo {
+    display: flex;
+    justify-content: center;
+    padding-left: 448px;
+}
+
+.cuadro_paso1 {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-text;
+    margin-right: 26px;
+    border-radius: 100%;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.cuadro_paso1_Active {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-text;
+    margin-right: 26px;
+    border-radius: 100%;
+    margin-top: 24px;
+    align-items: center;
+    background-color: $color-text;
+
+    .paso1 {
+        align-items: center;
+        margin-top: 5px;
+        color: $color-text1;
+        font-size: 18px;
+    }
+}
+
+.cuadro_paso2 {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-text;
+    margin-right: 26px;
+    border-radius: 100%;
+    margin-top: 24px;
+}
+
+.cuadro_paso3 {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-text;
+    border-radius: 100%;
+    margin-right: 26px;
+    margin-top: 24px;
+}
+
+.paso1 {
+    align-items: center;
+    margin-top: 5px;
+    color: $color-text;
+    font-size: 18px;
+}
+
+.grabarVideo {
+    display: block;
+}
+
+.eventosdeCaptura {
+    width: 260px;
+}
+
+.cronometro {
+    display: none;
+    padding-left: 130px;
+    padding-top: 30px;
+    color: $color-text;
+    font-family: $font;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#repetirCaptura {
+    display: none;
+    font-size: 13px;
+    color: $color-text;
+    font-family: $font;
+    text-decoration-line: underline;
+    text-decoration-color: $color2;
+    padding-left: 130px;
+    padding-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.linea1 {
+    height: 6.9px;
+    width: 795.9px;
+    background-color: $color-text;
+    margin: auto;
+}
+
+.btnCrearNuevoGifo {
+  
+    display: block;
+}
+
+.comenzar,
+.grabar,
+.finalizar,
+.subirGifo {
+    width: 127px;
+    font-size: 13px;
+    color: $color-text;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid $color-text;
+    border-radius: 25px;
+}
+
+.btnGrabar {
+    display: none;
+}
+
+.btnFinalizar {
+    display: none;
+}
+
+.btnSubirGifo {
+    display: none;
+}
+
+.displayNone {
+    display: none;
+
+}
+
+.displayBlock {
+    display: block;
+
+}
+
+.subirGif {
+    height: 300px;
+    background: $color-text;
+    width: 480px;
+    position: absolute;
+    opacity: 0.6;
+    margin-left: 103px;
+}
+
+.textoGif {
+    color: $color-text1;
+    font-family: $font1;
+    position: absolute;
+    top: 300px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    margin-left: 254px;
+}
+
+.imagenGif {
+    top: 260px;
+    position: absolute;
+}
+
+.btnDownGif {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 157px;
+    right: 510px;
+
+    :hover {
+        background-color: #fff;
+        border-radius: 6px;
+    }
+}
+
+.btnEnlaceLink {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 157px;
+    right: 467px;
+
+    :hover {
+        background-color: #fff;
+        border-radius: 6px;
+    }
+}
+
+.gif-en-mis-gifos-div {
+    width: 260px;
+    height: 200px;
+
+
+}
+
+.gifo-imagen {
+    width: 260px;
+    height: 200px;
+}
+
+.interior {
+    width: 260px;
+    height: 200px;
+
+}
+
+
+
+.btnEliminar {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    opacity: 0.6;
+    position: relative;
+    bottom: 194px;
+    left: 137px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.btnEliminar:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    opacity: 1;
+    position: relative;
+    bottom: 194px;
+    left: 137px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+
+.btnDownGIf2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    opacity: 0.6;
+    position: relative;
+    bottom: 194px;
+    left: 135px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+
+
+}
+
+.btnDownGIf2:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    opacity: 1;
+    position: relative;
+    bottom: 194px;
+    left: 135px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+
+
+}
+
+.btnexpandir2 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    opacity: 0.6;
+    bottom: 194px;
+    left: 135px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btnexpandir2:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    opacity: 1;
+    bottom: 194px;
+    left: 135px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+// carousel trending
+
+.panel_Carrusel {
+    display: none;
+    padding-top: 95px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    padding-top: 67px;
+    background: #F3F5F8 100%;
+
+    body.dark & {
+        background: $color1;
+    }
+}
+
+* {
+    list-style: none;
+}
+
+.cont1 {
+    text-align: center;
+}
+
+.cont2 {
+    color: $color-text;
+    font-family: $font;
+    font-size: 25px;
+}
+
+.cont3 {
+    font-family: $font2;
+    font-size: 18px;
+    color: $color4;
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center;
+    padding: 53px 92px 0px 92px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.button-left {
+    background-image: url('../zip/assets/button-slider-left.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/button-slider-left-md-noct.svg');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+
+.button-left:hover {
+    background-image: url('../zip/assets/button-slider-left-hover.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/button-slider-left-md-noct.svg');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+.carousel {
+    width: 1129px;
+    height: 275px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    .li-contededorGif {
+        margin-right: 29px;
+
+        .contededorGif {
+            width: 357px;
+            height: 275px;
+            overflow: hidden;
+        }
+    }
+}
+
+.btnFavoritoscarruselOn {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 295px;
+    left: 230px;
+    opacity: 0.7;
+    float: left;
+    margin-right: 10px;
+}
+
+.btnFavoritoscarruselOn:hover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 295px;
+    left: 230px;
+    opacity: 1;
+    float: left;
+    margin-right: 10px;
+}
+
+.button-right {
+    background-image: url('../zip/assets/Button-Slider-right.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/button-slider-right-md-noct.svg');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+
+.button-right:hover {
+    background-image: url('../zip/assets/Button-Slider-right-hover.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+
+    body.dark & {
+        background-image: url('../zip/assets/button-slider-right-md-noct.svg');
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+    }
+}
+
+
+.parrafoUsuario {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    position: relative;
+    bottom: 90px;
+    left: 10px;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.parrafo_p {
+    font-family: $font2;
+    font-size: 15px;
+    color: $color-text1;
+}
+
+.parrafoUsuarioExpandido {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    position: relative;
+    top: 342px;
+    right: 640px;
+    margin-right: 10px;
+}
+
+
+.usuarioHover {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+    margin-right: 10px;
+    color: $color-text1;
+    font-weight: bold;
+}
+
+.title_gifo_n {
+    font-family: $font2;
+    font-size: 16px;
+    color: $color-text1;
+}
+
+.parrafoUsuario_1 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 80px;
+    right: 135px;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.usuarioHover_1 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+    right: 131px;
+    margin-right: 10px;
+    color: $color-text1;
+    font-weight: bold;
+}
+
+//footer
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 116px;
+    padding: 49.5px 158px 51.5px 156px;
+    font-family: $font2;
+    font-size: 13px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-link {
+    display: inline-block;
+    width: 20px;
+    height: 20.2px;
+    background-size: 20px 20.2px;
+    margin: 0 20px;
+}
+
+.social-link.facebook {
+    background-image: url('../zip/assets/icon_facebook.svg');
+}
+
+.social-link.twitter {
+    background-image: url('../zip/assets/icon-twitter.svg');
+}
+
+.social-link.instagram {
+    background-image: url('../zip/assets/icon_instagram.svg');
+}
+
+
